@@ -1,0 +1,6 @@
+version: 1
+image: fleet-host:0.2.0-dev
+network: none
+base: main
+checks:
+  - {name: readme-reviewed, run: "grep -q 'Status: reviewed by the fleet' README.md", timeout: 60}
